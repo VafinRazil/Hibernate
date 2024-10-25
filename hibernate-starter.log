@@ -1,0 +1,85 @@
+2024-10-24 17:56:51 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-10-24 17:56:52 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-24 17:56:52 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-24 17:56:52 INFO  pooling:119 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2024-10-24 17:56:52 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-10-24 17:56:52 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+2024-10-24 17:56:52 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-24 17:56:52 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-10-24 17:56:52 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-24 17:56:52 INFO  HibernateRunner:28 - Agggg
+2024-10-25 18:22:45 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-10-25 18:22:45 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-25 18:22:45 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-25 18:22:45 INFO  pooling:119 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2024-10-25 18:22:45 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-10-25 18:22:45 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+2024-10-25 18:22:45 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-25 18:22:46 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-10-25 18:22:46 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 18:30:10 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-10-25 18:30:10 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-25 18:30:10 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-25 18:30:10 INFO  pooling:119 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2024-10-25 18:30:10 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-10-25 18:30:10 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+2024-10-25 18:30:10 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-25 18:30:10 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-10-25 18:30:10 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 18:30:11 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 42703
+2024-10-25 18:30:11 ERROR SqlExceptionHelper:142 - ОШИБКА: столбец "role" в таблице "users" не существует
+  Позиция: 60
+2024-10-25 18:30:49 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-10-25 18:30:49 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-25 18:30:49 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-25 18:30:49 INFO  pooling:119 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2024-10-25 18:30:49 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-10-25 18:30:49 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+2024-10-25 18:30:49 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-25 18:30:49 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-10-25 18:30:49 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 18:31:33 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-10-25 18:31:33 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-25 18:31:33 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-25 18:31:33 INFO  pooling:119 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2024-10-25 18:31:33 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-10-25 18:31:33 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+2024-10-25 18:31:33 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-25 18:31:33 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-10-25 18:31:34 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 18:31:39 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-10-25 18:31:39 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-25 18:31:40 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-25 18:31:40 INFO  pooling:119 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2024-10-25 18:31:40 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-10-25 18:31:40 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+2024-10-25 18:31:40 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-25 18:31:40 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-10-25 18:31:40 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 18:39:27 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-10-25 18:39:27 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-25 18:39:27 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-25 18:39:27 INFO  pooling:119 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2024-10-25 18:39:27 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-10-25 18:39:27 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+2024-10-25 18:39:27 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-25 18:39:27 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-10-25 18:39:28 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 18:44:36 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-10-25 18:44:36 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-25 18:44:36 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-25 18:44:36 INFO  pooling:119 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2024-10-25 18:44:36 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-10-25 18:44:36 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+2024-10-25 18:44:36 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-25 18:44:36 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-10-25 18:44:36 INFO  pooling:550 - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/postgres]
+2024-10-25 18:49:46 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-10-25 18:49:46 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-25 18:49:46 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-25 18:49:46 INFO  pooling:119 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2024-10-25 18:49:46 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-10-25 18:49:46 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+2024-10-25 18:49:46 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-25 18:49:46 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-10-25 18:49:47 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
