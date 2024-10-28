@@ -4,10 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import rvafin.entity.Birthday;
-import rvafin.entity.PersonalInfo;
-import rvafin.entity.Role;
-import rvafin.entity.User;
+import rvafin.entity.*;
 import rvafin.util.HibernateUtil;
 
 import java.time.LocalDate;
@@ -17,7 +14,7 @@ public class HibernateRunner {
 
     public static void main(String[] args) {
         User user = User.builder()
-                .username("ivan1@mail.ru")
+                .username("ivan5@mail.ru")
                 .personalInfo(PersonalInfo.builder()
                         .firstname("Ivan")
                         .lastname("Rva")
@@ -28,6 +25,9 @@ public class HibernateRunner {
         try {SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
             Session session = sessionFactory.openSession();
             session.beginTransaction();
+            Company company = session.get(Company.class, 2);
+            user.setCompany(company);
+            session.saveOrUpdate(company);
             session.saveOrUpdate(user);
             session.getTransaction().commit();
         }catch (HibernateException e){
