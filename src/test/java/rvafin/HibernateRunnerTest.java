@@ -4,21 +4,18 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.junit.jupiter.api.Test;
 import rvafin.entity.*;
+import rvafin.entity.second.Author;
+import rvafin.entity.second.Book;
 import rvafin.util.HibernateUtil;
 
-import javax.persistence.Column;
-import javax.persistence.Table;
-import java.lang.reflect.Field;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
+import javax.persistence.EntityGraph;
+import javax.persistence.TypedQuery;
+import javax.transaction.Transactional;
 import java.sql.SQLException;
 import java.time.Instant;
-import java.time.LocalDate;
-import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
+import java.util.Map;
 
 class HibernateRunnerTest {
 
@@ -68,34 +65,47 @@ class HibernateRunnerTest {
     }
 
     @Test
+    public void oneToMany2(){
+        try{
+            SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+            Session session = sessionFactory.openSession();
+            session.beginTransaction();
+            EntityGraph entityGraph = session.getEntityGraph("removeBooks");
+            Map<String, Object> properties = new HashMap<>();
+            properties.put("jakarta.persistence.fetchgraph", entityGraph);
+            Author author = session.find(Author.class, 2L, properties);
+            session.remove(author);
+            session.getTransaction().commit();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void checkOneToOne2(){
+        try{
+            SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+            Session session = sessionFactory.openSession();
+            session.beginTransaction();
+            rvafin.entity.second.Userr user = session.get(rvafin.entity.second.Userr.class, 4L);
+            System.out.println(user);
+            session.getTransaction().commit();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @Test
     public void checkInheritance(){
         try{
             SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
             Session session = sessionFactory.openSession();
             session.beginTransaction();
-            Company company = Company.builder()
-                    .name("Yandex").build();
-            session.saveOrUpdate(company);
-
-            Programmer programmer = Programmer.builder()
-                    .language(Language.JAVA)
-                    .company(company)
-                    .build();
-
-            session.saveOrUpdate(programmer);
-
-            Manager manager = Manager.builder()
-                    .username("petr@mail.ru")
-                    .project("Java Enterprice")
-                    .company(company)
-                    .build();
-
-            session.save(manager);
-            session.flush();
-            session.clear();
-
-            Programmer programmer1 = session.get(Programmer.class, 1L);
-            User manager1 = session.get(User.class, 2L);
+            List users = session.createQuery("""
+                        select u from User u
+                        where u.personalInfo.firstname='Pavel'
+                        """).list();
+            System.out.println(users);
             session.getTransaction().commit();
         }catch (Exception e){
             e.printStackTrace();
@@ -199,25 +209,25 @@ class HibernateRunnerTest {
 
     @Test
     public void checkOneToOne(){
-        //User user = User.builder()
-        //        .username("razil3@mail.ru")
-        //        .build();
-        //Profile profile = Profile.builder()
-        //        .lang("RU")
-        //        .street("Ostrovsckogo")
-        //        .build();
-        //try{
-        //    SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-        //    Session session = sessionFactory.openSession();
-        //    session.beginTransaction();
-        //    session.saveOrUpdate(user);
-        //    profile.setUser(user);
-        //    session.saveOrUpdate(profile);
-        //    //работа ведется с объектом в кеше
-        //    session.getTransaction().commit();
-        //}catch (Exception e){
-        //    e.printStackTrace();
-        //}
+        User user = User.builder()
+                .username("razil4@mail.ru")
+                .build();
+        Profile profile = Profile.builder()
+                .lang("RU")
+                .street("Ostrovsckogo1")
+                .build();
+        try{
+            SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+            Session session = sessionFactory.openSession();
+            session.beginTransaction();
+            session.saveOrUpdate(user);
+            profile.setUser(user);
+            session.saveOrUpdate(profile);
+            //работа ведется с объектом в кеше
+            session.getTransaction().commit();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Test
@@ -237,22 +247,22 @@ class HibernateRunnerTest {
 
     @Test
     public void addNewUserAndCompany(){
-        //try{
-        //    SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-        //    Session session = sessionFactory.openSession();
-        //    session.beginTransaction();
-        //    Company company = Company.builder()
-        //            .name("Mail")
-        //            .build();
-        //    User user = User.builder()
-        //            .username("ivan7@mail.ru")
-        //            .build();
-        //    company.addUser(user);
-        //    session.save(company);
-        //    session.getTransaction().commit();
-        //}catch (Exception e){
-        //    e.printStackTrace();
-        //}
+        try{
+            SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+            Session session = sessionFactory.openSession();
+            session.beginTransaction();
+            Company company = Company.builder()
+                    .name("Mail")
+                    .build();
+            User user = User.builder()
+                    .username("ivan7@mail.ru")
+                    .build();
+            company.addUser(user);
+            session.save(company);
+            session.getTransaction().commit();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Test

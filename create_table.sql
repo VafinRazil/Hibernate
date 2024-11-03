@@ -73,7 +73,24 @@ CREATE TABLE IF NOT EXISTS trainer_courses(
     id_course BIGINT REFERENCES course
 );
 
-DROP table trainer;
+CREATE TABLE IF NOT EXISTS test.users(
+    id BIGSERIAL PRIMARY KEY,
+    username VARCHAR(64) NOT NULL,
+    profile_id BIGINT REFERENCES test.profile
+);
+
+CREATE TABLE IF NOT EXISTS test.profile(
+    id BIGSERIAL PRIMARY KEY,
+    street VARCHAR(128),
+    country_id BIGINT REFERENCES test.country
+);
+
+CREATE TABLE IF NOT EXISTS test.country(
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(128) UNIQUE NOT NULL
+);
+
+DROP table IF EXISTS trainer;
 
 DROP table students;
 

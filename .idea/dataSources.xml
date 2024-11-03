@@ -13,7 +13,7 @@
       </jdbc-additional-properties>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="917233d6-4b5b-4557-977b-f9dfd7156e2e">
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="cdd1f7ac-aa51-4781-b914-0c493cad3753">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>

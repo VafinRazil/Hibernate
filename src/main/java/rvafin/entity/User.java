@@ -1,6 +1,8 @@
 package rvafin.entity;
 
 import lombok.*;
+import org.hibernate.annotations.FetchMode;
+import org.hibernate.annotations.FetchProfile;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -11,10 +13,9 @@ import java.util.List;
 @ToString(exclude = {"company", "profile"})
 @EqualsAndHashCode(of = "username")
 @AllArgsConstructor
-//@Builder
+@Builder
 @Entity
 @Table(schema = "public", name = "users")
-@Inheritance(strategy = InheritanceType.JOINED)
 public class User {
 
     @Id
@@ -34,7 +35,7 @@ public class User {
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Profile profile;
 
-    //@Builder.Default
+    @Builder.Default
     @OneToMany(mappedBy = "user")
     private List<UserChat> userChats = new ArrayList<>();
 
